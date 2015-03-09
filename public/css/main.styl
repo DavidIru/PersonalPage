@@ -1,0 +1,230 @@
+@import 'nib'
+
+vendor-prefixes = webkit moz o ms official
+
+html
+	font-family 'Lato', sans-serif
+	font-weight 300
+	
+body
+	margin 0
+
+header
+	h1
+		background linear-gradient(70deg, rgba(0, 0, 0, 0) 1.15em, rgba(74, 74, 74, 0.901961) 1.15em)
+		color white
+		float right
+		font-family 'Lato', sans-serif
+		font-size 24px
+		margin 0 10px
+		padding 5px 10px 5px 40px
+		position relative
+		text-transform uppercase
+		top 40%
+	h2
+		background linear-gradient(70deg, rgba(0, 0, 0, 0) 1.15em, rgba(74, 74, 74, 0.901961) 1.15em)
+		color white
+		float right
+		font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
+		font-size 16px
+		margin 0 10px
+		padding 5px 10px 5px 40px
+		position relative
+		text-align right
+		top 43%
+	span
+		-webkit-transition background-color 0.3s
+		background-color #000
+		border-radius 6px
+		display block
+		font-size 0px
+		height 4px
+		margin-left 10px
+		margin-top 20px
+		position fixed
+		transition background-color 0.3s
+		width 30px
+		&:after
+		&:before
+			-webkit-transition -webkit-transform 0.3s, background-color 0.3s
+			background #000
+			border-radius 6px
+			content ''
+			height 100%
+			left 0
+			position absolute
+			transition transform 0.3s, background-color 0.3s
+			width 100%
+		&:after
+			transform translateY(200%)
+		&:before
+			transform translateY(-200%)
+		&:hover
+			cursor pointer
+	&#principal
+		background-color #d8a772
+		height 240px
+		margin 0
+		text-align right
+	&.open
+		span
+			background transparent !important
+			z-index 2000
+			&:after
+			&:before
+				background-color white
+			&:after
+				-webkit-transform translateY(0) rotate(-45deg)
+				transform translateY(0) rotate(-45deg)
+			&:before
+				-webkit-transform translateY(0) rotate(45deg)
+				transform translateY(0) rotate(45deg)
+
+main
+	section
+		article
+			aside
+				float left
+			header
+				h4
+					font-size 12px
+		h3
+			clear both
+			font-size 14px
+			margin 10px 5px
+			text-transform uppercase
+			float none
+			
+
+// footer 
+// 	background-color #252525
+// 	height 640px
+// 	width 100%
+// 	h2 
+// 		color white
+// 		font-weight 300
+// 		padding 100px 30px 0
+// 	h3 
+// 		color white
+// 		font-family 'Lato', sans-serif
+// 		font-size 14px
+// 		font-weight 300
+// 		margin  10px 10% 20px
+// 	form
+// 		margin 0 auto
+// 		width 80%
+// 		button
+// 			span
+// 				padding-left 10px
+// 		label
+// 			color white
+// 			display table
+
+
+#contenedor 
+	border-left 1px solid black
+	height 960px
+	position absolute
+	right 0
+	top 0
+	width 320px
+	
+#cite
+	blockquote
+		border none
+		margin 0
+		background #000
+		cite
+			color #fff
+			display none
+			font-size 12px
+			margin 0 25px
+			padding-bottom 10px
+			text-align right
+			transition display 1s
+			&:before
+				content "\2014 \2009"
+		p
+			color #fff
+			font-size 14px
+			margin 0
+			min-height 50px
+			padding 10px 5px
+			&:before
+				color #fff
+				content "\201C"
+				display inline-block
+				float left
+				font-family sans-serif
+				font-size 80px
+				margin -10px 0 0				
+
+#oculta 
+	display none
+	position fixed
+	width 100%
+	height 100%
+	background rgba(0, 1, 7, 0.9)
+	overflow-y scroll
+	-webkit-overflow-scrolling touch
+	z-index 1
+
+
+/*
+footer form input[type="text"], footer form input[type="email"], footer form textarea  
+	background-color transparent
+	border none
+	border-bottom 1px solid white
+	margin 10px 0
+	width 240px
+	padding-left 20px
+	font-weight 200
+	color white
+	outline none
+	font-size 14px
+	font-family 'Lato', sans-serif
+	background-position left center
+	background-repeat no-repeat
+
+
+#name 
+	background-image url(img/user.gif)
+
+
+#email 
+	background-image url(images/user.gif)
+
+
+#subject 
+	background-image url(images/user.gif)
+
+
+#message 
+	background-image url(images/user.gif)
+
+
+footer form input[type="text"], footer form input[type="email"] 
+	height 20px
+
+
+footer form textarea 
+	resize vertical
+	min-height 80px
+
+
+footer form input[type="submit"] 
+	background-color #CCC
+	border 1px solid #333
+	border-radius 5px
+	padding 6px 20px
+	font-size 12px
+	font-weight bold
+	right 10%
+	position absolute
+
+
+footer form input.required, footer form textarea.required 
+	border-left 2px solid red
+	border-top-left-radius 2px
+	border-bottom-left-radius 2px
+*/
