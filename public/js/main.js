@@ -27,4 +27,12 @@ $(function() {
 		author: 'Steve Jobs'
 	}
 	typewriterEffect($('#cite > blockquote > p'), cite, 50);
+
+	$('#oculta section div').on('click', function (event) {
+		var target = event.currentTarget;
+		var lang = target.id;
+		//Change language page
+		$('#oculta section div').removeClass('selected');
+		$(target).addClass('selected');
+	})
 });

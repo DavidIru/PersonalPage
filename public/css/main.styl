@@ -25,7 +25,7 @@ header
 		background linear-gradient(70deg, rgba(0, 0, 0, 0) 1.15em, rgba(74, 74, 74, 0.901961) 1.15em)
 		color white
 		float right
-		font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
+		font-family 'Lato', Helvetica, Arial, sans-serif
 		font-size 16px
 		margin 0 10px
 		padding 5px 10px 5px 40px
@@ -194,10 +194,70 @@ main
 		margin 6px 0 6px 50px
 		text-transform uppercase
 	section
+		margin 20px 10px
 		div
-			&.es
-			&.en
-				background-color red
-	
+			display inline-block
+			text-align center
+			width 40%
+			margin 0 4%
+			div
+				display block
+				margin 0 auto
+				&.arrow
+					width 0
+					height 0
+					border none
+					font-size 0
+					line-height 0
+				&.line
+					width 80%
+					height 3px
+			p
+				color #ccc
+				margin 4px 0
+				font-size 12px
+				font-weight bold
+			span
+				margin 0 auto
+				display block
+				background-repeat no-repeat
+				width 45px
+				height 29px
+			&#es
+				span
+					background-image url(../img/languages/es.png)
+			&#en
+				span
+					background-image url(../img/languages/en.png)
+							
+			&.selected
+				div
+					&.arrow
+						border-left 4px solid transparent
+						border-right 4px solid transparent
+						border-bottom 4px solid #696969
+					&.line
+						background linear-gradient(to right, transparent, #696969, transparent)
 .overflow-hidden
 	overflow hidden
+	
+
+
+/* Retina displays */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5)
+	#oculta
+		section
+			div
+				&#es
+					span
+						background-image url(../img/languages/es@2x.png)
+						background-size contain
+				&#en
+					span
+						background-image url(../img/languages/en@2x.png)
+						background-size contain
+		
+	
