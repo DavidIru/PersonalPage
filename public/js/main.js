@@ -15,9 +15,22 @@ function typewriterEffect ($element, cite, interval) {
 	var timer = setInterval(effect ,interval, $element, cite, textLong);
 };
 
+function scroll() {
+	var scrollValue = window.pageYOffset;
+	var header = $('header#principal');
+	console.log('window.pageYOffset = ' + scrollValue);
+	if (scrollValue > 200) {
+		if (!header.hasClass('color2'))	{
+			header.addClass('color2');
+		}
+	} else {
+		header.removeClass('color2');
+	}
+}
+
 $(function() {
 	$('#menu').on('click', function () {
-		$('header').toggleClass('open');
+		$('header#principal').toggleClass('open');
 		$('body').toggleClass('overflow-hidden');
 		$('#oculta').toggle();
 	});
@@ -34,5 +47,7 @@ $(function() {
 		//Change language page
 		$('#oculta section div').removeClass('selected');
 		$(target).addClass('selected');
-	})
+	});
+
+	window.onscroll = scroll; //cuando hacemos scroll llamamos a la función
 });

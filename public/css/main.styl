@@ -12,7 +12,7 @@ body
 header
 	h1
 		background linear-gradient(70deg, rgba(0, 0, 0, 0) 1.15em, rgba(74, 74, 74, 0.901961) 1.15em)
-		color white
+		color #fff
 		float right
 		font-family 'Lato', sans-serif
 		font-size 24px
@@ -23,7 +23,7 @@ header
 		top 40%
 	h2
 		background linear-gradient(70deg, rgba(0, 0, 0, 0) 1.15em, rgba(74, 74, 74, 0.901961) 1.15em)
-		color white
+		color #fff
 		float right
 		font-family 'Lato', Helvetica, Arial, sans-serif
 		font-size 16px
@@ -34,7 +34,7 @@ header
 		top 43%
 	span
 		-webkit-transition background-color 0.3s
-		background-color rgba(0, 0, 0, 0.7)
+		background-color rgba(255, 255, 255, 0.7)
 		border-radius 6px
 		display block
 		font-size 0px
@@ -44,10 +44,11 @@ header
 		position fixed
 		transition background-color 0.3s
 		width 30px
+		z-index: 2000;
 		&:after
 		&:before
 			-webkit-transition -webkit-transform 0.3s, background-color 0.3s
-			background rgba(0, 0, 0, 0.7)
+			background-color rgba(255, 255, 255, 0.7)
 			border-radius 6px
 			content ''
 			height 100%
@@ -66,13 +67,19 @@ header
 		height 240px
 		margin 0
 		text-align right
+	&.color2
+		span
+			background-color rgba(0, 0, 0, 0.7)
+			&:after
+			&:before
+				background-color rgba(0, 0, 0, 0.7)
 	&.open
 		span
 			background transparent !important
 			z-index 2000
 			&:after
 			&:before
-				background-color white
+				background-color #fff
 			&:after
 				-webkit-transform translateY(0) rotate(-45deg)
 				transform translateY(0) rotate(-45deg)
@@ -140,23 +147,14 @@ main
 			background linear-gradient(to right, #fff, #bebebe, #fff)
 			border none
 			height 1px
-			width 90%	
-
-#contenedor 
-	border-left 1px solid black
-	height 960px
-	position absolute
-	right 0
-	top 0
-	width 320px
-	
+			width 90%
 #cite
 	blockquote
 		border none
 		margin 0
-		background #000
+		background #2F2F2F
 		cite
-			color #fff
+			color #eee
 			display none
 			font-size 12px
 			margin 0 25px
@@ -166,13 +164,13 @@ main
 			&:before
 				content "\2014 \2009"
 		p
-			color #fff
+			color #eee
 			font-size 14px
 			margin 0
 			min-height 50px
 			padding 10px 5px
 			&:before
-				color #fff
+				color #eee
 				content "\201C"
 				display inline-block
 				float left
@@ -193,51 +191,80 @@ main
 		color #fff
 		margin 6px 0 6px 50px
 		text-transform uppercase
-	section
-		margin 20px 10px
-		div
-			display inline-block
+	nav
+	section#social-networks
+		margin 0 auto
+		width 80%
+		h3
+			border-bottom 2px solid #fff
+			color #fff
+			font-size 18px
+			margin 0 auto
+			padding-bottom 10px
 			text-align center
-			width 40%
-			margin 0 4%
+			text-transform uppercase
+		ul
+			list-style none
+			padding 0
+			li
+				margin 0 0 5px
+				text-align center
+				a
+					color #fff
+					display block
+					font-size 16px
+					font-weight bold
+					padding 12px
+					text-decoration none
+					text-transform uppercase
+					&:hover
+						background red
+	section
+		&#languages
+			margin 20px 10px
 			div
-				display block
-				margin 0 auto
-				&.arrow
-					width 0
-					height 0
-					border none
-					font-size 0
-					line-height 0
-				&.line
-					width 80%
-					height 3px
-			p
-				color #ccc
-				margin 4px 0
-				font-size 12px
-				font-weight bold
-			span
-				margin 0 auto
-				display block
-				background-repeat no-repeat
-				width 45px
-				height 29px
-			&#es
-				span
-					background-image url(../img/languages/es.png)
-			&#en
-				span
-					background-image url(../img/languages/en.png)
-							
-			&.selected
+				display inline-block
+				margin 0 4%
+				text-align center
+				width 40%
 				div
+					display block
+					margin 0 auto
 					&.arrow
-						border-left 4px solid transparent
-						border-right 4px solid transparent
-						border-bottom 4px solid #696969
+						border none
+						font-size 0
+						height 0
+						line-height 0
+						width 0
 					&.line
-						background linear-gradient(to right, transparent, #696969, transparent)
+						height 3px
+						width 80%
+				p
+					color #ccc
+					font-size 12px
+					font-weight bold
+					margin 4px 0
+				span
+					background-repeat no-repeat
+					display block
+					height 29px
+					margin 0 auto
+					width 45px
+				&#es
+					span
+						background-image url(../img/languages/es.png)
+				&#en
+					span
+						background-image url(../img/languages/en.png)
+								
+				&.selected
+					div
+						&.arrow
+							border-bottom 4px solid #696969
+							border-left 4px solid transparent
+							border-right 4px solid transparent
+						&.line
+							background linear-gradient(to right, transparent, #696969, transparent)
 .overflow-hidden
 	overflow hidden
 	
