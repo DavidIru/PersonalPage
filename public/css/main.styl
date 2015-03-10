@@ -34,7 +34,7 @@ header
 		top 43%
 	span
 		-webkit-transition background-color 0.3s
-		background-color #000
+		background-color rgba(0, 0, 0, 0.7)
 		border-radius 6px
 		display block
 		font-size 0px
@@ -47,7 +47,7 @@ header
 		&:after
 		&:before
 			-webkit-transition -webkit-transform 0.3s, background-color 0.3s
-			background #000
+			background rgba(0, 0, 0, 0.7)
 			border-radius 6px
 			content ''
 			height 100%
@@ -81,45 +81,66 @@ header
 				transform translateY(0) rotate(45deg)
 
 main
+	margin 10px
+	position relative
 	section
 		article
 			aside
-				float left
+			p
+				display inline-block
+				margin 0
+			aside
+				margin 10px 0 5px
+				vertical-align top
+				width 100%
+				span
+					&.tag
+						background-color #f5f5f5
+						border 1px solid #eee
+						border-radius 2px
+						color #787878
+						display inline-block
+						font-size 10px
+						margin 3px
+						padding 2px 13px
 			header
+				margin 10px 0 0
 				h4
-					font-size 12px
+					font-size 14px
+					margin 0
+					padding 5px 10px
+			p
+				font-size 12px
+				width 100%
+				img
+					border 1px solid #eee
+					float left
+					margin 3px 5px 2px 0
+			&:last-child
+				border-bottom none
+		div
+			&#background
+				position absolute
+				top 0
+				right 0
+				z-index -1
+				&:before
+					content "< / >"
+					color #E0E0E0
+					font-size 40px
+					font-family 'Arial'
+					font-weight bold
 		h3
 			clear both
-			font-size 14px
-			margin 10px 5px
-			text-transform uppercase
 			float none
-			
-
-// footer 
-// 	background-color #252525
-// 	height 640px
-// 	width 100%
-// 	h2 
-// 		color white
-// 		font-weight 300
-// 		padding 100px 30px 0
-// 	h3 
-// 		color white
-// 		font-family 'Lato', sans-serif
-// 		font-size 14px
-// 		font-weight 300
-// 		margin  10px 10% 20px
-// 	form
-// 		margin 0 auto
-// 		width 80%
-// 		button
-// 			span
-// 				padding-left 10px
-// 		label
-// 			color white
-// 			display table
-
+			font-size 18px
+			margin 10px 20px
+			text-transform uppercase
+		hr
+			background linear-gradient(to right, #fff, #bebebe, #fff)
+			border none
+			height 1px
+			width 90%	
 
 #contenedor 
 	border-left 1px solid black
@@ -168,63 +189,15 @@ main
 	overflow-y scroll
 	-webkit-overflow-scrolling touch
 	z-index 1
-
-
-/*
-footer form input[type="text"], footer form input[type="email"], footer form textarea  
-	background-color transparent
-	border none
-	border-bottom 1px solid white
-	margin 10px 0
-	width 240px
-	padding-left 20px
-	font-weight 200
-	color white
-	outline none
-	font-size 14px
-	font-family 'Lato', sans-serif
-	background-position left center
-	background-repeat no-repeat
-
-
-#name 
-	background-image url(img/user.gif)
-
-
-#email 
-	background-image url(images/user.gif)
-
-
-#subject 
-	background-image url(images/user.gif)
-
-
-#message 
-	background-image url(images/user.gif)
-
-
-footer form input[type="text"], footer form input[type="email"] 
-	height 20px
-
-
-footer form textarea 
-	resize vertical
-	min-height 80px
-
-
-footer form input[type="submit"] 
-	background-color #CCC
-	border 1px solid #333
-	border-radius 5px
-	padding 6px 20px
-	font-size 12px
-	font-weight bold
-	right 10%
-	position absolute
-
-
-footer form input.required, footer form textarea.required 
-	border-left 2px solid red
-	border-top-left-radius 2px
-	border-bottom-left-radius 2px
-*/
+	h2
+		color #fff
+		margin 6px 0 6px 50px
+		text-transform uppercase
+	section
+		div
+			&.es
+			&.en
+				background-color red
+	
+.overflow-hidden
+	overflow hidden

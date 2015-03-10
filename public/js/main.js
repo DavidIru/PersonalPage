@@ -18,6 +18,7 @@ function typewriterEffect ($element, cite, interval) {
 $(function() {
 	$('#menu').on('click', function () {
 		$('header').toggleClass('open');
+		$('body').toggleClass('overflow-hidden');
 		$('#oculta').toggle();
 	});
 	//Remembering that you are going to die is the best way i know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.
