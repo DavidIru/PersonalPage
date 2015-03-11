@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="CVDavidIruzubieta">
+<html ng-app="Portfolio">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,28 +16,16 @@
     <body>
         <div id="oculta">
             <h2>David Iruzubieta</h2>
-            <section id="languages">
-                <div id="es" class="selected">
-                    <span></span>
-                    <p>Castellano</p>
-                    <div class="arrow"></div>
-                    <div class="line"></div>
-                </div>
-                <div id="en">
-                    <span></span>
-                    <p>English</p>
-                    <div class="arrow"></div>
-                    <div class="line"></div>
-                </div>
-            </section>
+            <language-selector></language-selector>
             <nav>
                 <h3>¿Qué estás buscando?</h3>
                 <ul>
-                    <li><a href="" title="">Inicio</a></li>
-                    <li><a href="" title="">Conocimientos</a></li>
-                    <li><a href="" title="">Proyectos</a></li>
-                    <li><a href="" title="">Contactar</a></li>
-                    <li><a href="" title="">Blog</a></li>
+                    <li><a href="#/" title="Inicio">Inicio</a></li>
+                    <li><a href="#/skills" title="Habilidades">Habilidades</a></li>
+                    <li><a href="#/projects" title="Proyectos">Proyectos</a></li>
+                    <li><a href="#/contact" title="Contactar">Contactar</a></li>
+                    <!-- <li><a href="#/blog" title="Blog">Blog</a></li> -->
+                    <li><a href="#/about-me" title="Sobre mi">Sobre mi</a></li>
                 </ul>
             </nav>
             <section id="social-networks">
@@ -51,96 +39,7 @@
                 </ul>
             </section>
         </div>
-        <header id="principal">
-            <span id="menu">Menú</span>
-            <h1>
-                David Iruzubieta
-            </h1>
-            <h2>Desarrollador fullstack</h2>
-        </header>
-        <section id="cite">
-            <blockquote>
-                <p></p>
-                <cite></cite>
-            </blockquote>
-        </section>
-        <main>
-            <section>
-                <h3>Proyectos destacados</h3>
-                <div id="background"></div>
-                <article>
-                    <header>
-                        <h4>COIIAR</h4>
-                    </header>
-                    <p>
-                        <img src="img/works/coiiar.png" alt="Página del COIIAR" />
-                        Encargado del rediseño y desarrollo completo de la plataforma web del Colegio Oficial de Ingenieros Industriales de Aragón y de La Rioja (COIIAR).  En este puesto he trabajado con PHP5, Javascript (jQuery), HTML5 y CSS3. Actualmente colaboro con ellos de manera puntual para tareas de mantenimiento.
-                    </p>
-                    <aside>
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Javascript</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">MySQL</span>
-                    </aside>
-                </article>
-                <hr />
-                <article>
-                    <header>
-                        <h4>COIIAR</h4>
-                    </header>
-                    <p>
-                        <img src="img/works/coiiar.png" alt="Página del COIIAR" />
-                        Encargado del rediseño y desarrollo completo de la plataforma web del Colegio Oficial de Ingenieros Industriales de Aragón y de La Rioja (COIIAR).  En este puesto he trabajado con PHP5, Javascript (jQuery), HTML5 y CSS3. Actualmente colaboro con ellos de manera puntual para tareas de mantenimiento.
-                    </p>
-                    <aside>
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Javascript</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">MySQL</span>
-                    </aside>
-                </article>
-                <hr />
-                <article>
-                    <header>
-                        <h4>COIIAR</h4>
-                    </header>
-                    <p>
-                        <img src="img/works/coiiar.png" alt="Página del COIIAR" />
-                        Encargado del rediseño y desarrollo completo de la plataforma web del Colegio Oficial de Ingenieros Industriales de Aragón y de La Rioja (COIIAR).  En este puesto he trabajado con PHP5, Javascript (jQuery), HTML5 y CSS3. Actualmente colaboro con ellos de manera puntual para tareas de mantenimiento.
-                    </p>
-                    <aside>
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Javascript</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">MySQL</span>
-                    </aside>
-                </article>
-                <hr />
-                <article>
-                    <header>
-                        <h4>COIIAR</h4>
-                    </header>
-                    <p>
-                        <img src="img/works/coiiar.png" alt="Página del COIIAR" />
-                        Encargado del rediseño y desarrollo completo de la plataforma web del Colegio Oficial de Ingenieros Industriales de Aragón y de La Rioja (COIIAR).  En este puesto he trabajado con PHP5, Javascript (jQuery), HTML5 y CSS3. Actualmente colaboro con ellos de manera puntual para tareas de mantenimiento.
-                    </p>
-                    <aside>
-                        <span class="tag">PHP</span>
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Javascript</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">MySQL</span>
-                    </aside>
-                </article>
-            </section>
-        </main>
+        <div ng-view></div>
         <!--
         <footer>
             <h2>Contacta conmigo!</h2>

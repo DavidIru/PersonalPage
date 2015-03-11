@@ -1,3 +1,22 @@
-<div>
-	esto es la home
-</div>
+<header id="principal">
+    <menu-button></menu-button>
+    <h1>
+        David Iruzubieta
+    </h1>
+    <h2>Desarrollador fullstack</h2>
+</header>
+<cite-home></cite-home>
+<main>
+    <section>
+        <h3>Proyectos destacados</h3>
+        <div id="background"></div>
+        <div ng-repeat="project in projects">
+	        <article>
+	        	<project-title></project-title>
+				<project-description></project-description>
+				<project-tags></project-tags>
+	        </article>
+        	<hr ng-if="!$last" />
+        </div>
+    </section>
+</main>
